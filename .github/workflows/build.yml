@@ -13,19 +13,18 @@ jobs:
     strategy:
       matrix:
         os:
-          - windows
-          - ubuntu
-          - macos
+          - windows-latest
+          - macos-latest
           
     steps:
     - name: Checkout
       uses: actions/checkout@v3
       
     - name: Install Rust Toolchain
-    - uses: dtolnay/rust-toolchain@stable
+      uses: dtolnay/rust-toolchain@stable
     
     - name: Cache dependencies
-    - uses: Swatinem/rust-cache@v2.2.1
+      uses: Swatinem/rust-cache@v2.2.1
     
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --release --verbose
