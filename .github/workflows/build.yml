@@ -1,4 +1,4 @@
-name: Rust
+name: Build
 
 on:
   push:
@@ -12,8 +12,14 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - windows
+          - ubuntu
+          - macos
+          
     steps:
     - uses: actions/checkout@v3
     - name: Build
