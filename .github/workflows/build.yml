@@ -4,6 +4,9 @@ on: [push, pull_request]
     
 jobs:
   build:
+
+    needs: build
+
     strategy:
       matrix:
         os:
