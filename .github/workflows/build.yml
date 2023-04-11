@@ -30,3 +30,8 @@ jobs:
     
     - name: Build
       run: cargo build --release --verbose
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@3
+      with:
+        name: ${{ matrix.os }}
