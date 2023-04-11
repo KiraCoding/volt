@@ -23,5 +23,10 @@ jobs:
     - name: Cache dependencies
       uses: Swatinem/rust-cache@v2.2.1
     
+    - name: Install webkit2gtk-4.1
+      if: matrix.os == 'ubuntu-latest'
+      run: |
+        sudo apt install libwebkit2gtk-4.1-dev
+    
     - name: Build
       run: cargo build --release --verbose
