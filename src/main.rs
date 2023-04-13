@@ -13,13 +13,10 @@ use wry::{
 fn main() -> Result<()> {
     let event_loop = EventLoop::new();
 
-    let _webview = WebViewBuilder::new(
-        WindowBuilder::new()
-            .with_title("Volt")
-            .build(&event_loop)?,
-    )?
-    .with_url("https://discord.com/app")?
-    .build()?;
+    let _webview =
+        WebViewBuilder::new(WindowBuilder::new().with_title("Volt").build(&event_loop)?)?
+            .with_url("https://discord.com/app")?
+            .build()?;
 
     event_loop.run(move |event, _, control_flow| {
         *control_flow = ControlFlow::Wait;
