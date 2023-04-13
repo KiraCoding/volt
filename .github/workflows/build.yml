@@ -36,4 +36,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: ${{ matrix.os }}
-        path: /target/release/volt(.exe)?
+        path: |
+           /target/release/volt
+           /target/release/volt.exe
