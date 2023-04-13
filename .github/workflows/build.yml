@@ -36,4 +36,4 @@ jobs:
         with:
           name: ${{ matrix.os }}
           path: |
-            target/release/volt${{ if startsWith(matrix.os, 'windows') }}.exe{{ endif }}
+            target/release/volt(|.exe)
