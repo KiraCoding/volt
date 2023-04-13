@@ -35,5 +35,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.os }}
-          path: |
-            target/release/volt
+          path: ${{ if startsWith(matrix.os, 'windows') }}target/release/volt.exe${{ else }}target/release/volt${{ endif }}
+            
