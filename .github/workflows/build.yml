@@ -36,4 +36,4 @@ jobs:
         with:
           name: ${{ matrix.os }}
           path: |
-            sh -c 'if [[ "$OSTYPE" == "msys" ]]; then echo "target/release/volt.exe"; else echo "target/release/volt"; fi'
+            target/release/volt${{ if startsWith(matrix.os, 'windows') }}.exe{{ endif }}
