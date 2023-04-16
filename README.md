@@ -4,10 +4,9 @@
 > This custom client may violate Discords terms of service, which could result in account suspension or termination. The client may also have limited functionality. Use at your own risk.
 
 ## Building
+All platforms use [wry][WRY_REPO] which depends on the following dependencies for each system.
 
 ### Linux
-Volt uses Wry which depends on gtk-rs and it's related libraries for window creation like WebKitGTK
-
 #### Arch Linux / Manjaro:
 ```sh
 sudo pacman -S webkit2gtk-4.1
@@ -36,3 +35,5 @@ Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
 
 [LICENSE_MIT]: ./LICENSE-MIT
 [LICENSE_APACHE]: ./LICENSE-APACHE
+
+[WRY_REPO]: https://github.com/tauri-apps/wry
