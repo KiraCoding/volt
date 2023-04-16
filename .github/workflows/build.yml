@@ -39,7 +39,6 @@ jobs:
     needs:
       - rustfmt
       - clippy
-      - ubuntu-deps
 
     strategy:
       matrix:
