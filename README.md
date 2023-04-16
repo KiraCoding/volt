@@ -3,6 +3,10 @@
 > **Warning**\
 > This custom client may violate Discords terms of service, which could result in account suspension or termination. The client may also have limited functionality. Use at your own risk.
 
+## Download
+Volt can be downloaded on [webpage].\
+Prebuilt binaries for Ubuntu, macOS and Windows can also be found under [releases][RELEASES].
+
 ## Building
 All platforms use [wry][WRY_REPO] which depends on the following dependencies for each system.
 
@@ -35,5 +39,7 @@ Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
 
 [LICENSE_MIT]: ./LICENSE-MIT
 [LICENSE_APACHE]: ./LICENSE-APACHE
+
+[RELEASES]: https://github.com/KiraCoding/volt/releases
 
 [WRY_REPO]: https://github.com/tauri-apps/wry
