@@ -9,8 +9,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-
-
       - name: Install Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
@@ -20,7 +18,7 @@ jobs:
         run: cargo fmt --all --check
 
   clippy:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -33,10 +31,6 @@ jobs:
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2.2.1
       
-      - name: Install webkit2gtk-4.1
-        run: |
-          sudo apt install libwebkit2gtk-4.1-dev
-
       - name: Clippy
         run: cargo clippy -- -D warnings
 
