@@ -32,6 +32,9 @@ WebKit is native on macOS so everything should be fine.
 ### Windows
 WebView2 provided by Microsoft Edge Chromium is used. Volt supports Windows 7, 8, 10 and 11.
 
+## Contributing
+See
+
 ## License
 Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
 - [MIT License][LICENSE_MIT] ─ https://opensource.org/license/mit/
@@ -41,5 +44,6 @@ Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
 [LICENSE_APACHE]: ./LICENSE-APACHE
 
 [RELEASES]: https://github.com/KiraCoding/volt/releases
+[CONTRIBUTING]: ./CONTRIBUTING.md
 
 [WRY_REPO]: https://github.com/tauri-apps/wry
