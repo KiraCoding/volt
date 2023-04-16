@@ -4,7 +4,6 @@
 > This custom client may violate Discords terms of service, which could result in account suspension or termination. The client may also have limited functionality. Use at your own risk.
 
 ## Download
-Volt can be downloaded on [webpage].\
 Prebuilt binaries for Ubuntu, macOS and Windows can also be found under [releases][RELEASES].
 
 ## Building
