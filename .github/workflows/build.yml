@@ -3,13 +3,6 @@ name: Build
 on: [push, pull_request]
 
 jobs:
-  ubuntu-deps:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install webkit2gtk-4.1
-        run: |
-          sudo apt install libwebkit2gtk-4.1-dev
-
   rustfmt:
     runs-on: ubuntu-latest
     steps:
@@ -36,6 +29,10 @@ jobs:
         with:
           components: "clippy"
       
+      - name: Install webkit2gtk-4.1
+        run: |
+          sudo apt install libwebkit2gtk-4.1-dev
+
       - name: Clippy
         run: cargo clippy -- -D warnings
 
@@ -61,6 +58,10 @@ jobs:
 
       - name: Install Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
+
+      - name: Install webkit2gtk-4.1
+        run: |
+          sudo apt install libwebkit2gtk-4.1-dev
 
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2.2.1
