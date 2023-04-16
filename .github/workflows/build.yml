@@ -41,7 +41,6 @@ jobs:
       - rustfmt
       - clippy
       - ubuntu-deps
-        if: matrix.os == "ubuntu-latest"
 
     strategy:
       matrix:
