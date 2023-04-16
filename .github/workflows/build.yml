@@ -32,6 +32,8 @@ jobs:
         run: cargo clippy -- -D warnings
 
   build:
+    needs: ["rustfmt", "clippy"]
+
     strategy:
       matrix:
         os:
