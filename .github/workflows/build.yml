@@ -40,7 +40,11 @@ jobs:
         run: cargo clippy -- -D warnings
 
   build:
-    needs: ["ubuntu-deps", "rustfmt", "clippy"]
+    needs:
+      - rustfmt
+      - clippy
+      - ubuntu-deps
+        if: matrix.os == "ubuntu-latest"
 
     strategy:
       matrix:
