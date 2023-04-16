@@ -37,8 +37,8 @@ See [`CONTRIBUTING.md`][CONTRIBUTING].
 
 ## License
 Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
-- [MIT License][LICENSE_MIT] ─ https://opensource.org/license/mit/
-- [Apache License (Version 2.0)][LICENSE_APACHE] ─ http://www.apache.org/licenses/LICENSE-2.0
+- [`LICENSE-MIT`][LICENSE_MIT] ─ https://opensource.org/license/mit/
+- [`LICENSE-APACHE`][LICENSE_APACHE] ─ http://www.apache.org/licenses/LICENSE-2.0
 
 [LICENSE_MIT]: ./LICENSE-MIT
 [LICENSE_APACHE]: ./LICENSE-APACHE
