@@ -39,8 +39,7 @@ jobs:
         run: cargo clippy -- -D warnings
 
   build:
-    needs: ["rustfmt", "clippy"]
-    needs: ${{ matrix.os == 'ubuntu-latest' && '["ubuntu-deps", "rustfmt", "clippy"]' || '["rustfmt", "clippy"]' }}
+    needs: ["ubuntu-deps", "rustfmt", "clippy"]
 
     strategy:
       matrix:
