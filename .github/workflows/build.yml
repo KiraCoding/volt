@@ -12,7 +12,7 @@ jobs:
       - name: Install Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          components: ["rustfmt"]
+          components: "rustfmt"
 
       - name: Format
         run: cargo fmt --all --check
@@ -26,7 +26,7 @@ jobs:
       - name: Install Rust Toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          components: ["clippy"]
+          components: "clippy"
       
       - name: Clippy
         run: cargo clippy -- -D warnings
