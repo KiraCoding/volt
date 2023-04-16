@@ -33,7 +33,7 @@ WebKit is native on macOS so everything should be fine.
 WebView2 provided by Microsoft Edge Chromium is used. Volt supports Windows 7, 8, 10 and 11.
 
 ## Contributing
-See
+See [`CONTRIBUTING.md`][CONTRIBUTING].
 
 ## License
 Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
