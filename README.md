@@ -44,6 +44,6 @@ Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
 [LICENSE_APACHE]: ./LICENSE-APACHE
 
 [RELEASES]: https://github.com/KiraCoding/volt/releases
-[CONTRIBUTING]: ./CONTRIBUTING.md
+[CONTRIBUTING]: ./.github/CONTRIBUTING.md
 
 [WRY_REPO]: https://github.com/tauri-apps/wry
