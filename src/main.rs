@@ -14,7 +14,7 @@ fn main() -> Result<()> {
     let event_loop = EventLoop::new();
 
     let _webview =
-        WebViewBuilder::new(WindowBuilder::new().with_title("Volt").build(&event_loop)?)?
+        WebViewBuilder::new(WindowBuilder::new().with_title("Revolt").build(&event_loop)?)?
             .with_url("https://discord.com/app")?
             .build()?;
 
