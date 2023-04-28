@@ -1,4 +1,4 @@
-# Volt
+# Revolt
 
 > **Warning**\
 > This custom client may violate Discords terms of service, which could result in account suspension or termination. The client may also have limited functionality. Use at your own risk.
@@ -35,7 +35,7 @@ WebView2 provided by Microsoft Edge Chromium is used. Volt supports Windows 7, 8
 See [`CONTRIBUTING.md`][CONTRIBUTING] for contributing to the project.
 
 ## License
-Volt is distributed under the terms of both the  MIT and Apache 2.0 license.
+Revolt is distributed under the terms of both the  MIT and Apache 2.0 license.
 - [`LICENSE-APACHE`][LICENSE_APACHE] ─ http://www.apache.org/licenses/LICENSE-2.0
 - [`LICENSE-MIT`][LICENSE_MIT] ─ https://opensource.org/license/mit/
 
