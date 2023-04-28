@@ -6,7 +6,7 @@ rust-version = "1.64.0"
 license = "MIT or Apache-2.0"
 
 [dependencies]
-wry = { version = "0.28.2", default-features = false }
+wry = { version = "0.28.3", default-features = false }
 
 [profile.release]
 codegen-units = 1
