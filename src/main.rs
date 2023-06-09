@@ -1,14 +1,10 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
-use wry::{
-    application::{
-        event::{Event, StartCause, WindowEvent},
-        event_loop::{ControlFlow, EventLoop},
-        window::WindowBuilder,
-    },
-    webview::WebViewBuilder,
-    Result,
-};
+use wry::application::window::WindowBuilder;
+use wry::application::event::{Event, StartCause, WindowEvent};
+use wry::application::event_loop::{ControlFlow, EventLoop}
+use wry::webview::WebViewBuilder;
+use wry::Result;
 
 fn main() -> Result<()> {
     let event_loop = EventLoop::new();
