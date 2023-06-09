@@ -2,7 +2,7 @@
 
 use wry::application::window::WindowBuilder;
 use wry::application::event::{Event, StartCause, WindowEvent};
-use wry::application::event_loop::{ControlFlow, EventLoop}
+use wry::application::event_loop::{ControlFlow, EventLoop};
 use wry::webview::WebViewBuilder;
 use wry::Result;
 
