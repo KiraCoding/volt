@@ -1,5 +1,8 @@
 # Revolt
 
+> **Important**\
+> Revolt is currently under development, and official releases have not been shipped yet.
+
 > **Warning**\
 > This custom client may violate Discords terms of service, which could result in account suspension or termination. The client may also have limited functionality. Use at your own risk.
 
@@ -43,5 +46,5 @@ Revolt is distributed under the terms of both the  MIT and Apache 2.0 license.
 [LICENSE_APACHE]: ./LICENSE-APACHE
 [CONTRIBUTING]: ./.github/CONTRIBUTING.md
 
-[RELEASES]: https://github.com/KiraCoding/volt/releases
+[RELEASES]: https://github.com/KiraCoding/revolt/releases
 [WRY_REPO]: https://github.com/tauri-apps/wry
