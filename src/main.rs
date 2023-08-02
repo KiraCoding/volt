@@ -5,6 +5,7 @@ use wry::application::event_loop::{ControlFlow, EventLoop};
 use wry::application::window::WindowBuilder;
 use wry::webview::WebViewBuilder;
 use wry::Result;
+use open::that;
 
 fn main() -> Result<()> {
     let event_loop = EventLoop::new();
@@ -15,6 +16,10 @@ fn main() -> Result<()> {
             .build(&event_loop)?,
     )?
     .with_url("https://discord.com/app")?
+    .with_new_window_req_handler(|url| {
+        let _ = that(url);
+        false
+    })
     .build()?;
 
     event_loop.run(move |event, _, control_flow| {
