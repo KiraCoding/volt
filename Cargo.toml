@@ -1,6 +1,7 @@
 [package]
 name = "revolt"
 version = "0.1.0"
+authors = ["KiraCoding"]
 edition = "2021"
 rust-version = "1.64.0"
 license = "MIT or Apache-2.0"
