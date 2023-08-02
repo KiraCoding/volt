@@ -6,6 +6,7 @@ rust-version = "1.64.0"
 license = "MIT or Apache-2.0"
 
 [dependencies]
+open = { version = "5.0.0" }
 wry = { version = "0.30.0", default-features = false }
 
 [profile.release]
