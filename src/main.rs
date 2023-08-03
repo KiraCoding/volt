@@ -12,8 +12,7 @@ fn main() -> Result<()> {
     let event_loop = EventLoop::new();
 
     let data_directory = ProjectDirs::from("", "kiracoding", env!("CARGO_PKG_NAME"))
-        .map(|project_dirs| Some(project_dirs.config_dir().to_path_buf()))
-        .unwrap_or(None);
+        .map(|project_dirs| project_dirs.config_dir().to_path_buf());
 
     let web_context = &mut WebContext::new(data_directory);
 
