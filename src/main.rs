@@ -1,7 +1,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use directories::ProjectDirs;
-use open::that;
+use open::that as open;
 use wry::application::event::{Event, StartCause, WindowEvent};
 use wry::application::event_loop::{ControlFlow, EventLoop};
 use wry::application::window::WindowBuilder;
@@ -24,7 +24,7 @@ fn main() -> Result<()> {
     .with_url("https://discord.com/app")?
     .with_web_context(web_context)
     .with_new_window_req_handler(|url| {
-        let _ = that(url);
+        let _ = open(url);
         false
     })
     .build()?;
