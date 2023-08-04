@@ -4,7 +4,8 @@
 > Revolt is currently under development, and official releases have not been shipped yet.
 
 > **Warning**\
-> This custom client may violate Discords terms of service, which could result in account suspension or termination. The client may also have limited functionality. Use at your own risk.
+> This custom client may violate Discords terms of service, which could result in account suspension or termination.\
+> The client may also have limited functionality. Use at your own risk.
 
 ## Download
 Prebuilt binaries for Ubuntu, macOS and Windows can also be found under [releases][RELEASES].
