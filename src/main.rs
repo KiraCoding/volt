@@ -11,10 +11,10 @@ use wry::Result;
 fn main() -> Result<()> {
     let event_loop = EventLoop::new();
 
-    let data_directory = ProjectDirs::from("", "kiracoding", env!("CARGO_PKG_NAME"))
-        .map(|project_dirs| project_dirs.config_dir().to_path_buf());
-
-    let web_context = &mut WebContext::new(data_directory);
+    let web_context = &mut WebContext::new(
+        ProjectDirs::from("", "kiracoding", env!("CARGO_PKG_NAME"))
+            .map(|project_dirs| project_dirs.config_dir().to_path_buf()),
+    );
 
     let _webview = WebViewBuilder::new(
         WindowBuilder::new()
