@@ -23,6 +23,7 @@ fn main() -> Result<()> {
     )?
     .with_url("https://discord.com/app")?
     .with_web_context(web_context)
+    .with_initialization_script(include_str!("./init.js"))
     .with_new_window_req_handler(|url| {
         let _ = open(url);
         false
