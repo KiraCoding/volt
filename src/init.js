@@ -1,6 +1,23 @@
-document.addEventListener('DOMContentLoaded', function () {
+
+const disallowedURLs = [
+  "https://discord.com/api/v9/science",
+];
+
+const originalOpen = XMLHttpRequest.prototype.open;
+
+Object.defineProperty(XMLHttpRequest.prototype, "open", {
+  value: function (method, url) {
+    if (method === "POST" && disallowedURLs.includes(url)) {
+      throw new Error(`XMLHttpRequest to "${url}" with POST method is blocked`);
+    }
+
+    return originalOpen.apply(this, arguments);
+  },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   // Create a new style element
-  var styleElement = document.createElement('style');
+  var styleElement = document.createElement("style");
 
   // Set the CSS code as the content of the style element
   var cssCode = `
