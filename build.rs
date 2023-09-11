@@ -1,4 +1,4 @@
-use std::{env::var, fs::File, path::Path, sync::Arc, io::Write};
+use std::{env::var, fs::File, io::Write, path::Path, sync::Arc};
 use swc::{config::JsMinifyOptions, try_with_handler, BoolOrDataConfig, Compiler};
 use swc_common::{SourceMap, GLOBALS};
 
@@ -33,5 +33,6 @@ fn main() {
     let out_dir = var("OUT_DIR").unwrap();
     let dest_path = Path::new(&out_dir).join("init.js");
     let mut file = File::create(&dest_path).expect("Failed to create file");
-    file.write_all(output.code.as_bytes()).expect("Failed to write to file");
+    file.write_all(output.code.as_bytes())
+        .expect("Failed to write to file");
 }
