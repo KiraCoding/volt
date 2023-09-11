@@ -24,7 +24,6 @@ exceptions = [
 ]
 
 [bans]
-
 multiple-versions = "deny"
 wildcards = "deny"
 highlight = "all"
