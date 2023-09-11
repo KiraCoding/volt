@@ -32,7 +32,7 @@ fn main() {
 
     let out_dir = var("OUT_DIR").unwrap();
     let dest_path = Path::new(&out_dir).join("init.js");
-    let mut file = File::create(&dest_path).expect("Failed to create file");
+    let mut file = File::create(dest_path).expect("Failed to create file");
     file.write_all(output.code.as_bytes())
         .expect("Failed to write to file");
 }
