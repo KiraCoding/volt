@@ -36,7 +36,6 @@ fn main() -> Result<()> {
         *control_flow = ControlFlow::Wait;
 
         match event {
-            Event::NewEvents(StartCause::Init) => println!("Wry has started!"),
             Event::WindowEvent {
                 event: WindowEvent::CloseRequested,
                 ..
