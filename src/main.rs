@@ -2,7 +2,7 @@
 
 use directories::ProjectDirs;
 use open::that as open;
-use wry::application::event::{Event, StartCause, WindowEvent};
+use wry::application::event::{Event, WindowEvent};
 use wry::application::event_loop::{ControlFlow, EventLoop};
 use wry::application::window::WindowBuilder;
 use wry::webview::{WebContext, WebViewBuilder};
