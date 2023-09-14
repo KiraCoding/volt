@@ -7,8 +7,8 @@
 > This custom client may violate Discords terms of service, which could result in account suspension or termination.\
 > The client may also have limited functionality. Use at your own risk.
 
-## Download
-Prebuilt binaries for Ubuntu, macOS and Windows can also be found under [releases][RELEASES].
+## ~~Download~~
+~~Prebuilt binaries for Ubuntu, macOS and Windows can also be found under [releases][RELEASES].~~
 
 ## Building
 All platforms use [wry][WRY_REPO] which depends on the following dependencies for each system.
