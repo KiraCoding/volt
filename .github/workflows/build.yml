@@ -27,6 +27,7 @@ jobs:
         uses: dtolnay/rust-toolchain@nightly
         with:
           components: "clippy"
+          shared-key: "macos-latest"
 
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2.2.1
@@ -63,6 +64,8 @@ jobs:
 
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2.2.1
+        with:
+          shared-key: matrix.os
 
       - name: Build
         run: cargo build --release --verbose
