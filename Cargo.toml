@@ -10,7 +10,7 @@ license = "Apache-2.0 OR MIT"
 [dependencies]
 directories = { version = "5.0.1" }
 open = { version = "5.0.0" }
-wry = { version = "0.33.0", default-features = false, features = ["tao"] }
+wry = { version = "0.33.1", default-features = false, features = ["tao"] }
 
 [build-dependencies]
 swc = { version = "0.266.37" }
