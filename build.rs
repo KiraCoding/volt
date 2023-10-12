@@ -1,7 +1,7 @@
 use std::{env::var, fs::File, io::Write, path::Path, sync::Arc};
 use swc::{config::JsMinifyOptions, try_with_handler, BoolOrDataConfig, Compiler};
-use swc_common::GLOBALS;
 use swc_common::source_map::SourceMap;
+use swc_common::GLOBALS;
 
 fn main() {
     println!("cargo:rerun-if-changed=src/init.js");
