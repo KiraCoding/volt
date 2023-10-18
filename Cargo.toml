@@ -13,7 +13,7 @@ open = { version = "5.0.0" }
 wry = { version = "0.33.1", default-features = false, features = ["tao"] }
 
 [build-dependencies]
-swc = { version = "0.269.2" }
+swc = { version = "0.269.5" }
 swc_common = { version = "0.33.0" }
 
 [profile.release]
