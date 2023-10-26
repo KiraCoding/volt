@@ -14,7 +14,7 @@ wry = { version = "0.34.1", default-features = false, features = ["tao"] }
 
 [build-dependencies]
 swc = { version = "0.269.16" }
-swc_common = { version = "0.33.1" }
+swc_common = { version = "0.33.2" }
 
 [profile.release]
 codegen-units = 1
