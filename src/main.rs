@@ -8,17 +8,18 @@ use wry::application::window::WindowBuilder;
 use wry::webview::{WebContext, WebViewBuilder};
 use wry::Result;
 
-fn main() -> Result<()> {
-    let event_loop = EventLoop::new();
+const NAME: &str = env!("CARGO_PKG_NAME");
+const AUTHOR: &str = env!("CARGO_PKG_AUTHORS");
 
-    let project_dirs = ProjectDirs::from("", "kiracoding", env!("CARGO_PKG_NAME"))
+fn main() -> Result<()> {
+    let project_dirs = ProjectDirs::from("", AUTHOR, NAME)
         .map(|project_dirs| project_dirs.config_dir().to_path_buf());
 
     let web_context = &mut WebContext::new(project_dirs);
 
-    let window = WindowBuilder::new()
-        .with_title("Revolt")
-        .build(&event_loop)?;
+    let event_loop = EventLoop::new();
+
+    let window = WindowBuilder::new().with_title(NAME).build(&event_loop)?;
 
     let init_script = include_str!(concat!(env!("OUT_DIR"), "/init.js"));
 
