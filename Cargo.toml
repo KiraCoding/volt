@@ -5,7 +5,7 @@ authors = ["KiraCoding"]
 edition = "2021"
 rust-version = "1.64.0"
 description = "Webview based Discord client"
-license = "Apache-2.0 OR MIT"
+license = "GPL-3.0-only"
 
 [dependencies]
 directories = { version = "5.0.1" }
