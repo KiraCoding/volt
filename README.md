@@ -41,6 +41,4 @@ Revolt is distributed under the terms of the GNU General Public License v3.0.
 
 [LICENSE]: ./LICENSE
 [CONTRIBUTING]: ./.github/CONTRIBUTING.md
-
-[RELEASES]: https://github.com/KiraCoding/revolt/releases
 [WRY_REPO]: https://github.com/tauri-apps/wry
