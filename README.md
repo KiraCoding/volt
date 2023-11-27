@@ -1,7 +1,7 @@
 # Volt
 
 > [!IMPORTANT]\
-> Revolt is currently under development, and official releases have not been shipped yet.
+> Volt is currently under development, and official releases have not been shipped yet.
 
 > [!CAUTION]\
 > This custom client potentially breaches Discord's terms of service, leading to potential account suspension or termination, and may have limited functionality.
