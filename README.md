@@ -4,8 +4,8 @@
 > Revolt is currently under development, and official releases have not been shipped yet.
 
 > [!CAUTION]\
-> This custom client may violate Discords terms of service, which could result in account suspension or termination.\
-> The client may also have limited functionality. Use at your own risk.
+> This custom client potentially breaches Discord's terms of service, leading to potential account suspension or termination, and may have limited functionality.
+> Use at your own risk.
 
 ## Building
 All platforms use [wry][WRY_REPO] which depends on the following dependencies for each system.
