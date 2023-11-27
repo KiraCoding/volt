@@ -2636,17 +2636,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f"
 
 [[package]]
-name = "revolt"
-version = "0.1.0"
-dependencies = [
- "directories",
- "open",
- "swc",
- "swc_common",
- "wry",
-]
-
-[[package]]
 name = "rustc-demangle"
 version = "0.1.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4360,6 +4349,17 @@ name = "version_check"
 version = "0.9.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "49874b5167b65d7193b8aba1567f5c7d93d001cafc34600cee003eda787e483f"
+
+[[package]]
+name = "volt"
+version = "0.1.0"
+dependencies = [
+ "directories",
+ "open",
+ "swc",
+ "swc_common",
+ "wry",
+]
 
 [[package]]
 name = "waker-fn"
