@@ -1,9 +1,11 @@
-use std::{env::var, fs::File, io::Write, path::Path, sync::Arc};
+use std::fs::write;
+use std::{env::var, path::Path, sync::Arc};
 use swc::{config::JsMinifyOptions, try_with_handler, BoolOrDataConfig, Compiler};
 use swc_common::source_map::SourceMap;
 use swc_common::GLOBALS;
 
 fn main() {
+    println!("cargo:rerun-if-changed=build.rs");
     println!("cargo:rerun-if-changed=src/init.js");
 
     let cm = Arc::<SourceMap>::default();
@@ -31,9 +33,14 @@ fn main() {
         })
         .unwrap();
 
+    // let out_dir = var("OUT_DIR").unwrap();
+    // let dest_path = Path::new(&out_dir).join("init.js");
+    // let mut file = File::create(dest_path).expect("Failed to create file");
+    // file.write_all(output.code.as_bytes())
+    //     .expect("Failed to write to file");
+
     let out_dir = var("OUT_DIR").unwrap();
     let dest_path = Path::new(&out_dir).join("init.js");
-    let mut file = File::create(dest_path).expect("Failed to create file");
-    file.write_all(output.code.as_bytes())
-        .expect("Failed to write to file");
+
+    write(dest_path, output.code).unwrap();
 }
