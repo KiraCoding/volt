@@ -1,2 +1,5 @@
 # [unstable]
 # build-std = ["core", "alloc", "std", "proc_macro"]
+
+[build]
+rustflags = ["-Z", "threads=8"]
