@@ -76,5 +76,5 @@ jobs:
         with:
           name: ${{ matrix.os }}
           path: |
-            target/release/revolt
-            target/release/revolt.exe
+            target/release/volt
+            target/release/volt.exe
