@@ -10,6 +10,7 @@ use wry::{WebContext, WebViewBuilder};
 
 const NAME: &str = env!("CARGO_PKG_NAME");
 const AUTHOR: &str = env!("CARGO_PKG_AUTHORS");
+const SCRIPT: &str = include_str!(concat!(env!("OUT_DIR"), "/init.js"));
 
 fn main() -> Result<()> {
     let project_dirs = ProjectDirs::from("", AUTHOR, NAME)
@@ -21,12 +22,31 @@ fn main() -> Result<()> {
 
     let window = WindowBuilder::new().with_title(NAME).build(&event_loop)?;
 
-    let init_script = include_str!(concat!(env!("OUT_DIR"), "/init.js"));
+    #[cfg(any(
+        target_os = "windows",
+        target_os = "macos",
+        target_os = "ios",
+        target_os = "android"
+    ))]
+    let builder = WebViewBuilder::new(&window);
 
-    let _webview = WebViewBuilder::new(&window)
+    #[cfg(not(any(
+        target_os = "windows",
+        target_os = "macos",
+        target_os = "ios",
+        target_os = "android"
+    )))]
+    let builder = {
+        use tao::platform::unix::WindowExtUnix;
+        use wry::WebViewBuilderExtUnix;
+        let vbox = window.default_vbox().unwrap();
+        WebViewBuilder::new_gtk(vbox)
+    };
+
+    let _webview = builder
         .with_url("https://discord.com/app")?
         .with_web_context(web_context)
-        .with_initialization_script(init_script)
+        .with_initialization_script(SCRIPT)
         .with_new_window_req_handler(|url| {
             let _ = open(url);
             false
