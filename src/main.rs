@@ -1,12 +1,12 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use anyhow::Result;
 use directories::ProjectDirs;
 use open::that as open;
-use wry::application::event::{Event, WindowEvent};
-use wry::application::event_loop::{ControlFlow, EventLoop};
-use wry::application::window::WindowBuilder;
-use wry::webview::{WebContext, WebViewBuilder};
-use wry::Result;
+use tao::event::{Event, WindowEvent};
+use tao::event_loop::{ControlFlow, EventLoop};
+use tao::window::WindowBuilder;
+use wry::{WebContext, WebViewBuilder};
 
 const NAME: &str = env!("CARGO_PKG_NAME");
 const AUTHOR: &str = env!("CARGO_PKG_AUTHORS");
@@ -23,7 +23,7 @@ fn main() -> Result<()> {
 
     let init_script = include_str!(concat!(env!("OUT_DIR"), "/init.js"));
 
-    let _webview = WebViewBuilder::new(window)?
+    let _webview = WebViewBuilder::new(&window)
         .with_url("https://discord.com/app")?
         .with_web_context(web_context)
         .with_initialization_script(init_script)
