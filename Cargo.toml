@@ -12,7 +12,9 @@ anyhow = { version = "1.0.79" }
 directories = { version = "5.0.1" }
 open = { version = "5.0.1" }
 tao = { version = "0.25.0" }
-wry = { version = "0.36.0", default-features = false }
+wry = { version = "0.36.0", default-features = false, features = [
+  "os-webview",
+] }
 
 [build-dependencies]
 swc = { version = "0.273.5" }
