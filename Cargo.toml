@@ -8,9 +8,11 @@ description = "Webview based Discord client"
 license = "GPL-3.0-only"
 
 [dependencies]
+anyhow = { version = "1.0.79" }
 directories = { version = "5.0.1" }
 open = { version = "5.0.1" }
-wry = { version = "0.34.2", default-features = false, features = ["tao"] }
+tao = { version = "0.25.0" }
+wry = { version = "0.36.0", default-features = false }
 
 [build-dependencies]
 swc = { version = "0.273.5" }
