@@ -13,8 +13,8 @@ open = { version = "5.0.1" }
 wry = { version = "0.34.2", default-features = false, features = ["tao"] }
 
 [build-dependencies]
-swc = { version = "0.269.86" }
-swc_common = { version = "0.33.11" }
+swc = { version = "0.273.5" }
+swc_common = { version = "0.33.17" }
 
 [profile.release]
 codegen-units = 1
