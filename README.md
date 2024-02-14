@@ -1,5 +1,4 @@
 # Volt
-
 > [!IMPORTANT]\
 > Volt is currently under development, and official releases have not been shipped yet.
 
@@ -36,6 +35,9 @@ WebView2 provided by Microsoft Edge Chromium is used. Volt supports Windows 7, 8
 See [`CONTRIBUTING.md`][CONTRIBUTING] for contributing to the project.
 
 ## License
+> [!NOTE]\
+> This project is independent and not affiliated with Discord or Discord Inc. in any way.
+
 Volt is distributed under the terms of the GNU General Public License v3.0.
 - [`LICENSE`][license] ─ `GNU GPL-3.0` ─ https://www.gnu.org/licenses/gpl-3.0.en.html
 
