@@ -22,28 +22,7 @@ fn main() -> Result<()> {
 
     let window = WindowBuilder::new().with_title(NAME).build(&event_loop)?;
 
-    #[cfg(any(
-        target_os = "windows",
-        target_os = "macos",
-        target_os = "ios",
-        target_os = "android"
-    ))]
-    let builder = WebViewBuilder::new(&window);
-
-    #[cfg(not(any(
-        target_os = "windows",
-        target_os = "macos",
-        target_os = "ios",
-        target_os = "android"
-    )))]
-    let builder = {
-        use tao::platform::unix::WindowExtUnix;
-        use wry::WebViewBuilderExtUnix;
-        let vbox = window.default_vbox().unwrap();
-        WebViewBuilder::new_gtk(vbox)
-    };
-
-    let _webview = builder
+    let _webview = WebViewBuilder::new(&window)
         .with_url("https://discord.com/app")?
         .with_web_context(web_context)
         .with_initialization_script(SCRIPT)
