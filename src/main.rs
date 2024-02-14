@@ -27,7 +27,7 @@ fn main() -> Result<()> {
         .with_web_context(web_context)
         .with_initialization_script(SCRIPT)
         .with_new_window_req_handler(|url| {
-            let _ = open(url);
+            open(url).unwrap();
             false
         })
         .build()?;
