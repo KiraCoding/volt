@@ -17,7 +17,7 @@ wry = { version = "0.36.0", default-features = false, features = [
 ] }
 
 [build-dependencies]
-swc = { version = "0.273.5" }
+swc = { version = "0.273.6" }
 swc_common = { version = "0.33.17" }
 
 [profile.release]
