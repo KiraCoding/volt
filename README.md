@@ -26,9 +26,11 @@
   <tr>
     <td>
       <pre lang="sh">cargo build</pre>
+      <pre lang="sh">cargo run</pre>
     </td>
     <td>
       <pre lang="sh">cargo build --release</pre>
+      <pre lang="sh">cargo run --release</pre>
     </td>
   </tr>
 </tbody>
