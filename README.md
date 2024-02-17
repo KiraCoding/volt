@@ -7,29 +7,13 @@
 > Use at your own risk.
 
 ## Building
-All platforms use [wry][WRY_REPO] which depends on the following dependencies for each system.
 
-### Linux
-#### Arch Linux / Manjaro:
-```sh
-sudo pacman -S webkit2gtk-4.1
-```
+> [!IMPORTANT]\
+> Volt requires additonal dependencies to build on Linux systems, please look at these [here][WRY_REPO].
 
-####  Debian / Ubuntu
-```sh
-sudo apt install libwebkit2gtk-4.1-dev
-```
-
-#### Fedora
-```sh
-sudo dnf install gtk3-devel webkit2gtk4.1-devel
-```
-
-### macOS
-WebKit is native on macOS so everything should be fine.
-
-### Windows
-WebView2 provided by Microsoft Edge Chromium is used. Volt supports Windows 7, 8, 10 and 11.
+| `dev`                            | `release`                                  |
+|:---------------------------------|:-------------------------------------------|
+| <pre lang="sh">cargo build</pre> | <pre lang="sh">cargo build --release</pre> |
 
 ## Contributing
 See [`CONTRIBUTING.md`][CONTRIBUTING] for contributing to the project.
@@ -43,4 +27,4 @@ Volt is distributed under the terms of the GNU General Public License v3.0.
 
 [LICENSE]: ./LICENSE
 [CONTRIBUTING]: ./.github/CONTRIBUTING.md
-[WRY_REPO]: https://github.com/tauri-apps/wry
+[WRY_REPO]: https://github.com/tauri-apps/wry?tab=readme-ov-file#linux
