@@ -14,8 +14,12 @@
 <table>
 <thead>
   <tr>
-    <th>`dev`</th>
-    <th>`release`</th>
+    <th>
+      `dev`
+    </th>
+    <th>
+      `release`
+    </th>
   </tr>
 </thead>
 <tbody>
