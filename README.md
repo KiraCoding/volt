@@ -7,7 +7,6 @@
 > Use at your own risk.
 
 ## Building
-
 > [!IMPORTANT]\
 > Volt requires additonal dependencies to build on Linux systems, please look at these [here][WRY_REPO].
 
@@ -44,7 +43,7 @@ See [`CONTRIBUTING.md`][CONTRIBUTING] for contributing to the project.
 > This project is independent and not affiliated with `Discord` or `Discord Inc.` in any way.
 
 Volt is distributed under the terms of the GNU General Public License v3.0.
-- [`LICENSE`][license] ─ `GNU GPL-3.0` ─ https://www.gnu.org/licenses/gpl-3.0.en.html
+- [`LICENSE`][LICENSE] ─ `GNU GPL-3.0` ─ https://www.gnu.org/licenses/gpl-3.0.en.html
 
 [LICENSE]: ./LICENSE
 [CONTRIBUTING]: ./.github/CONTRIBUTING.md
