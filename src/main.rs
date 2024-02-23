@@ -23,7 +23,7 @@ fn main() -> Result<()> {
     let window = WindowBuilder::new().with_title(NAME).build(&event_loop)?;
 
     let _webview = WebViewBuilder::new(&window)
-        .with_url("https://discord.com/app")?
+        .with_url("https://discord.com/app")
         .with_web_context(web_context)
         .with_initialization_script(SCRIPT)
         .with_new_window_req_handler(|url| {
