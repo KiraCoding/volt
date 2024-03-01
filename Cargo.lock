@@ -2612,9 +2612,9 @@ dependencies = [
 
 [[package]]
 name = "swc"
-version = "0.273.12"
+version = "0.273.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e76b2178d66bd5e95c974c9d01bcc75217b1888d08ecaf47ab5e8c7a7c5a778a"
+checksum = "1dd114f0ba8e2c7b378a39edad0c967141d979925cf098b30c373251619673cc"
 dependencies = [
  "anyhow",
  "base64",
@@ -3021,9 +3021,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_lints"
-version = "0.92.11"
+version = "0.92.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f94b0f1af120e7bdb505b5594538ff9516a818378b809086e79cb869d6240ab2"
+checksum = "4b7611a593018399cbdf1698afa5886a3837d4e10722d2d96a1abb8481630a74"
 dependencies = [
  "auto_impl",
  "dashmap",
