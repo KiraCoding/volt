@@ -15,7 +15,7 @@ tao = { version = "0.26.1" }
 wry = { version = "0.37.0" }
 
 [build-dependencies]
-swc = { version = "0.273.20" }
+swc = { version = "0.273.21" }
 swc_common = { version = "0.33.18" }
 winres = { version = "0.1.12" }
 
