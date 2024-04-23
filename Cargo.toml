@@ -16,7 +16,7 @@ wry = { version = "0.39.2" }
 
 [build-dependencies]
 swc = { version = "0.273.22" }
-swc_common = { version = "0.33.18" }
+swc_common = { version = "0.33.21" }
 winres = { version = "0.1.12" }
 
 [profile.release]
