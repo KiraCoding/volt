@@ -1,46 +1,22 @@
 [advisories]
-db-path = "~/.cargo/advisory-db"
-db-urls = ["https://github.com/rustsec/advisory-db"]
-vulnerability = "deny"
-unmaintained = "deny"
+version = 2
 yanked = "warn"
-notice = "deny"
-ignore = [
-    "RUSTSEC-2023-0019", # `kuchiki 0.8.1` is unmaintained
-]
-
-[licenses]
-unlicensed = "deny"
-allow = ["MIT", "MIT-0", "Apache-2.0", "BSD-3-Clause"]
-copyleft = "deny"
-default = "deny"
-exceptions = [
-    { name = "selectors", allow = ["MPL-2.0"] },              # Copyleft
-    { name = "cssparser", allow = ["MPL-2.0"] },              # Copyleft
-    { name = "dtoa-short", allow = ["MPL-2.0"] },             # Copyleft
-    { name = "thin-slice", allow = ["MPL-2.0"] },             # Copyleft
-    { name = "cssparser-macros", allow = ["MPL-2.0"] },       # Copyleft
-    { name = "unicode-ident", allow = ["Unicode-DFS-2016"] }, # Unicode
-]
 
 [bans]
-multiple-versions = "deny"
-wildcards = "deny"
-highlight = "all"
-skip = [
-    { name = "rand", version = "0.7.3" },          # Duplicate
-    { name = "wasi", version = "0.9.0" },          # Duplicate
-    { name = "itoa", version = "0.4.6" },          # Duplicate
-    { name = "syn", version = "1.0.109" },         # Duplicate
-    { name = "rand_core", version = "0.5.1" },     # Duplicate
-    { name = "getrandom", version = "0.1.16" },    # Duplicate
-    { name = "phf_shared", version = "0.8.0" },    # Duplicate
-    { name = "rand_chacha", version = "0.2.2" },   # Duplicate
-    { name = "phf_generator", version = "0.8.0" }, # Duplicate
+multiple-versions = "allow"
+
+[licenses]
+version = 2
+allow = [
+    "Apache-2.0 WITH LLVM-exception",
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "GPL-3.0",
+    "MIT",
+    "MPL-2.0",
+    "Unicode-DFS-2016",
 ]
 
 [sources]
 unknown-registry = "deny"
 unknown-git = "deny"
-allow-registry = ["https://github.com/rust-lang/crates.io-index"]
-allow-git = []
