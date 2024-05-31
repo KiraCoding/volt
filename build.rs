@@ -65,6 +65,5 @@ fn compile_js() {
         .source_text;
 
     let out_dir = var("OUT_DIR").unwrap();
-    // let out_dir = "./";
     write(Path::new(&out_dir).join("init.js"), printed).unwrap();
 }
