@@ -3,7 +3,7 @@ name = "volt"
 version = "0.1.0"
 authors = ["KiraCoding"]
 edition = "2021"
-rust-version = "1.64.0"
+rust-version = "1.77.0"
 description = "Webview based Discord client"
 license = "GPL-3.0-only"
 
@@ -15,8 +15,7 @@ tao = { version = "0.28.0" }
 wry = { version = "0.40.0" }
 
 [build-dependencies]
-swc = { version = "0.273.22" }
-swc_common = { version = "0.33.18" }
+oxc = { version = "0.13.1", features = ["transformer", "codegen"] }
 winres = { version = "0.1.12" }
 
 [profile.release]

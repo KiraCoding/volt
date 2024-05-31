@@ -1,10 +1,15 @@
-use std::fs::write;
-use std::{env::var, path::Path, sync::Arc};
-use swc::{config::JsMinifyOptions, try_with_handler, BoolOrDataConfig, Compiler};
-use swc_common::source_map::SourceMap;
-use swc_common::GLOBALS;
+use oxc::allocator::Allocator;
+use oxc::codegen::{Codegen, CodegenOptions};
+use oxc::parser::Parser;
+use oxc::span::SourceType;
+use oxc::transformer::{TransformOptions, Transformer};
+use std::env::var;
+use std::fs::{read_to_string, write};
+use std::path::Path;
 
 fn main() {
+    println!("cargo::rerun-if-changed=src/init.ts");
+
     #[cfg(all(target_os = "windows", not(debug_assertions)))]
     windows_res();
 
@@ -25,34 +30,41 @@ fn windows_res() {
 }
 
 fn compile_js() {
-    println!("cargo:rerun-if-changed=build.rs");
-    println!("cargo:rerun-if-changed=src/init.js");
+    let allocator = Allocator::default();
+    let path = Path::new("./src/init.ts");
+    let source_text = read_to_string(path).expect("{name} not found");
+    let source_type = SourceType::from_path(path).unwrap();
 
-    let cm = Arc::<SourceMap>::default();
-    let compiler = Compiler::new(cm.clone());
-    let output = GLOBALS
-        .set(&Default::default(), || {
-            try_with_handler(cm.clone(), Default::default(), |handler| {
-                let fm = cm
-                    .load_file(Path::new("./src/init.js"))
-                    .expect("Failed to laod file");
+    let ret = Parser::new(&allocator, &source_text, source_type).parse();
 
-                compiler.minify(
-                    fm,
-                    handler,
-                    &JsMinifyOptions {
-                        compress: BoolOrDataConfig::from_bool(true),
-                        mangle: BoolOrDataConfig::from_bool(true),
-                        keep_fnames: false,
-                        ..Default::default()
-                    },
-                )
-            })
-        })
-        .unwrap();
+    if !ret.errors.is_empty() {
+        for error in ret.errors {
+            let error = error.with_source_code(source_text.clone());
+            println!("{error:?}");
+        }
+        return;
+    }
+
+    let mut program = ret.program;
+
+    let transform_options = TransformOptions::default();
+
+    Transformer::new(
+        &allocator,
+        path,
+        source_type,
+        &source_text,
+        &ret.trivias,
+        transform_options,
+    )
+    .build(&mut program)
+    .unwrap();
+
+    let printed = Codegen::<true>::new("", &source_text, CodegenOptions::default())
+        .build(&program)
+        .source_text;
 
     let out_dir = var("OUT_DIR").unwrap();
-    let dest_path = Path::new(&out_dir).join("init.js");
-
-    write(dest_path, output.code).unwrap();
+    // let out_dir = "./";
+    write(Path::new(&out_dir).join("init.js"), printed).unwrap();
 }
