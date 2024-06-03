@@ -47,3 +47,7 @@ fn main() {
     let out_dir = var("OUT_DIR").unwrap();
     write(Path::new(&out_dir).join("init.js"), printed).unwrap();
 }
+
+fn compile_js() {
+
+}
