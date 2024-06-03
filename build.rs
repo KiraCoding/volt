@@ -10,26 +10,6 @@ use std::path::Path;
 fn main() {
     println!("cargo::rerun-if-changed=src/init.ts");
 
-    #[cfg(all(target_os = "windows", not(debug_assertions)))]
-    windows_res();
-
-    compile_js();
-}
-
-#[cfg(all(target_os = "windows", not(debug_assertions)))]
-fn windows_res() {
-    use winres::WindowsResource;
-
-    println!("cargo:rerun-if-changed=assets/volt.ico");
-
-    WindowsResource::new()
-        .set_icon("./assets/volt.ico")
-        .set("InternalName", "Volt")
-        .compile()
-        .unwrap();
-}
-
-fn compile_js() {
     let allocator = Allocator::default();
     let path = Path::new("./src/init.ts");
     let source_text = read_to_string(path).expect("{name} not found");

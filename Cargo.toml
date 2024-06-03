@@ -16,7 +16,6 @@ wry = { version = "0.40.0" }
 
 [build-dependencies]
 oxc = { version = "0.13.1", features = ["transformer", "codegen"] }
-winres = { version = "0.1.12" }
 
 [profile.release]
 codegen-units = 1
