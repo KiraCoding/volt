@@ -45,5 +45,8 @@ fn main() {
         .source_text;
 
     let out_dir = var("OUT_DIR").unwrap();
-    write(Path::new(&out_dir).join("init.js"), printed).unwrap();
+    let out_path = Path::new(&out_dir).join("init.js");
+    write(&out_path, printed).unwrap();
+
+    println!("cargo::rustc-env=SCRIPT={}", &out_path.display());
 }

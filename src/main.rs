@@ -10,7 +10,6 @@ use wry::{WebContext, WebViewBuilder};
 
 const NAME: &str = env!("CARGO_PKG_NAME");
 const AUTHOR: &str = env!("CARGO_PKG_AUTHORS");
-const SCRIPT: &str = include_str!(concat!(env!("OUT_DIR"), "/init.js"));
 
 fn main() -> Result<()> {
     let project_dirs = ProjectDirs::from("", AUTHOR, NAME)
@@ -25,7 +24,7 @@ fn main() -> Result<()> {
     let _webview = WebViewBuilder::new(&window)
         .with_url("https://discord.com/app")
         .with_web_context(web_context)
-        .with_initialization_script(SCRIPT)
+        .with_initialization_script(include_str!(env!("SCRIPT")))
         .with_new_window_req_handler(|url| {
             open(url).unwrap();
             false
