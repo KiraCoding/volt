@@ -40,7 +40,7 @@ fn main() {
     .build(&mut program)
     .unwrap();
 
-    let printed = Codegen::<true>::new("", &source_text, CodegenOptions::default())
+    let printed = Codegen::<true>::new("", &source_text, CodegenOptions::default(), None)
         .build(&program)
         .source_text;
 
