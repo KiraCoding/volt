@@ -1,5 +1,5 @@
 use oxc::allocator::Allocator;
-use oxc::codegen::{Codegen, CodegenOptions};
+use oxc::codegen::WhitespaceRemover;
 use oxc::parser::Parser;
 use oxc::span::SourceType;
 use oxc::transformer::{TransformOptions, Transformer};
@@ -26,10 +26,9 @@ fn main() {
     }
 
     let mut program = ret.program;
-
     let transform_options = TransformOptions::default();
 
-    Transformer::new(
+    let _ = Transformer::new(
         &allocator,
         path,
         source_type,
@@ -37,12 +36,9 @@ fn main() {
         ret.trivias.clone(),
         transform_options,
     )
-    .build(&mut program)
-    .unwrap();
+    .build(&mut program);
 
-    let printed = Codegen::<true>::new("", &source_text, ret.trivias, CodegenOptions::default())
-        .build(&program)
-        .source_text;
+    let printed = WhitespaceRemover::new().build(&program).source_text;
 
     let out_dir = var("OUT_DIR").unwrap();
     let out_path = Path::new(&out_dir).join("init.js");
