@@ -15,7 +15,7 @@ tao = { version = "0.28.1" }
 wry = { version = "0.41.0" }
 
 [build-dependencies]
-oxc = { version = "0.15.0", features = ["transformer", "codegen"] }
+oxc = { version = "0.16.0", features = ["transformer", "codegen"] }
 
 [profile.release]
 codegen-units = 1
