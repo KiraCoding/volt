@@ -10,7 +10,7 @@ license = "GPL-3.0-only"
 [dependencies]
 anyhow = { version = "1.0.86" }
 directories = { version = "5.0.1" }
-open = { version = "5.2.0" }
+open = { version = "5.3.0" }
 tao = { version = "0.28.1" }
 wry = { version = "0.41.0" }
 
