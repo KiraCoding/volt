@@ -10,31 +10,6 @@
 > [!IMPORTANT]\
 > Volt requires additonal dependencies to build on Linux systems, please look at these [here][WRY_REPO].
 
-<table>
-<thead>
-  <tr>
-    <th>
-      `dev`
-    </th>
-    <th>
-      `release`
-    </th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>
-      <pre lang="sh">cargo build</pre>
-      <pre lang="sh">cargo run</pre>
-    </td>
-    <td>
-      <pre lang="sh">cargo build --release</pre>
-      <pre lang="sh">cargo run --release</pre>
-    </td>
-  </tr>
-</tbody>
-</table>
-
 ## Contributing
 See [`CONTRIBUTING.md`][CONTRIBUTING] for contributing to the project.
 
