@@ -12,7 +12,7 @@ anyhow = { version = "1.0.86" }
 directories = { version = "5.0.1" }
 open = { version = "5.3.0" }
 tao = { version = "0.30.0" }
-wry = { version = "0.43.0" }
+wry = { version = "0.43.1" }
 
 [build-dependencies]
 oxc = { version = "0.24.3", features = ["transformer", "codegen"] }
