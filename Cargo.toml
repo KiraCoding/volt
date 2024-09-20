@@ -11,7 +11,7 @@ license = "GPL-3.0-only"
 anyhow = { version = "1.0.89" }
 directories = { version = "5.0.1" }
 open = { version = "5.3.0" }
-tao = { version = "0.30.0" }
+tao = { version = "0.30.1" }
 wry = { version = "0.44.0" }
 
 [build-dependencies]
